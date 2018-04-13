@@ -15,7 +15,7 @@ void Figure::FigureRotation()
 			figure[figureNumber].Y[3] += 2; // ##
 		}
 		else if (position == 1 || position == 3)
-		{									// #
+		{					// #
 			figure[figureNumber].X[0] += 2; //##
 			figure[figureNumber].Y[3] -= 2; //#
 		}
@@ -47,7 +47,7 @@ void Figure::FigureRotation()
 			figure[figureNumber].Y[3] += 2;//##
 		}
 		else if (position == 1 || position == 3)
-		{									//#
+		{					//#
 			figure[figureNumber].X[0] -= 2; //##
 			figure[figureNumber].Y[3] -= 2; // #
 		}
@@ -91,7 +91,7 @@ void Figure::FigureRotation()
 		{
 			figure[figureNumber].Y[0] ++;//#
 			figure[figureNumber].X[0] ++;//##
-		}								 //#
+		}				     //#
 		else if (position == 2)
 		{
 			figure[figureNumber].X[3] --;//###
@@ -99,7 +99,7 @@ void Figure::FigureRotation()
 			figure[figureNumber].X[0] -= 2;
 		}
 		else if (position == 3)
-		{								 // #
+		{				     // #
 			figure[figureNumber].X[3] --;//##
 			figure[figureNumber].Y[3] --;// #
 		}
