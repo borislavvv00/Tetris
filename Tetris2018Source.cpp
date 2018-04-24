@@ -16,10 +16,7 @@ int main()
 		aFigure.Rules();
 		aFigure.FigureTouchOtherFigure();
 		ClearSreen();
-		//if (speedUp == false)
-		//{
-			Sleep(300);
-		//}
+		Sleep(300);
 	}
 	return 0;
 }
