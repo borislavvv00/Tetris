@@ -10,7 +10,7 @@ void Map::TrowFigure(int i, int j)
 	if (dropFigure == true)
 	{
 		figureNumber++;
-		shape.push_back(2/*rand() % 7*/); //randomly set a figure shape
+		shape.push_back(rand() % 7); //randomly set a figure shape
 		for (int n = 0; n < aFigure.figure[figureNumber].X.size(); n++) // used to set curent figure coordinates
 		{
 			aFigure.figure[figureNumber].X[n] = aFigure.figures[shape[figureNumber]][n] % 2;
