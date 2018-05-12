@@ -1,0 +1,20 @@
+﻿  Tetris2018Source.cpp
+c:\users\admin\documents\visual studio 2015\projects\cppprojects\tetris2018\tetris2018\drawfigures.h(9): warning C4018: '<': signed/unsigned mismatch
+c:\users\admin\documents\visual studio 2015\projects\cppprojects\tetris2018\tetris2018\figuremovement.h(13): warning C4018: '<': signed/unsigned mismatch
+c:\users\admin\documents\visual studio 2015\projects\cppprojects\tetris2018\tetris2018\figuremovement.h(19): warning C4018: '<': signed/unsigned mismatch
+c:\users\admin\documents\visual studio 2015\projects\cppprojects\tetris2018\tetris2018\figuremovement.h(26): warning C4018: '<': signed/unsigned mismatch
+c:\users\admin\documents\visual studio 2015\projects\cppprojects\tetris2018\tetris2018\figuremovement.h(40): warning C4018: '<': signed/unsigned mismatch
+c:\users\admin\documents\visual studio 2015\projects\cppprojects\tetris2018\tetris2018\figuremovement.h(46): warning C4018: '<': signed/unsigned mismatch
+c:\users\admin\documents\visual studio 2015\projects\cppprojects\tetris2018\tetris2018\figuremovement.h(53): warning C4018: '<': signed/unsigned mismatch
+c:\users\admin\documents\visual studio 2015\projects\cppprojects\tetris2018\tetris2018\biuldingmap.h(14): warning C4018: '<': signed/unsigned mismatch
+c:\users\admin\documents\visual studio 2015\projects\cppprojects\tetris2018\tetris2018\figurebehavior.h(10): warning C4018: '<': signed/unsigned mismatch
+c:\users\admin\documents\visual studio 2015\projects\cppprojects\tetris2018\tetris2018\figurebehavior.h(15): warning C4018: '<': signed/unsigned mismatch
+c:\users\admin\documents\visual studio 2015\projects\cppprojects\tetris2018\tetris2018\figurebehavior.h(35): warning C4018: '<': signed/unsigned mismatch
+c:\users\admin\documents\visual studio 2015\projects\cppprojects\tetris2018\tetris2018\figurebehavior.h(52): warning C4018: '<': signed/unsigned mismatch
+c:\users\admin\documents\visual studio 2015\projects\cppprojects\tetris2018\tetris2018\figurebehavior.h(54): warning C4018: '<': signed/unsigned mismatch
+c:\users\admin\documents\visual studio 2015\projects\cppprojects\tetris2018\tetris2018\figurebehavior.h(79): warning C4018: '<': signed/unsigned mismatch
+c:\users\admin\documents\visual studio 2015\projects\cppprojects\tetris2018\tetris2018\figurebehavior.h(92): warning C4018: '<': signed/unsigned mismatch
+c:\users\admin\documents\visual studio 2015\projects\cppprojects\tetris2018\tetris2018\figurebehavior.h(107): warning C4018: '<': signed/unsigned mismatch
+c:\users\admin\documents\visual studio 2015\projects\cppprojects\tetris2018\tetris2018\tetris2018source.cpp(8): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  Tetris2018.vcxproj -> C:\Users\admin\documents\visual studio 2015\Projects\CppProjects\Tetris2018\Debug\Tetris2018.exe
+  Tetris2018.vcxproj -> C:\Users\admin\documents\visual studio 2015\Projects\CppProjects\Tetris2018\Debug\Tetris2018.pdb (Full PDB)
