@@ -5,25 +5,30 @@
 #include "DrawFigures.h"
 #include "ClassMap.h"
 
+void Figure::RowElementsIncrease()
+{
+	for (int n = 0; n < figure[figureNumber].X.size(); n++)
+	{
+		for (int r = 0; r < HIHG; r++)
+		{
+			if (figure[figureNumber].X[n] == r)
+			{
+				aMap.row[r].numberOfElements++;
+			}
+		}
+	}
+}
+
 void Figure::FigureReachTheBottom()
 {
 	for (int m = 0; m < figure[figureNumber].X.size(); m++)
 	{
-		if (figure[figureNumber].X[m] == HIHG - 1) //if one of the figure's parts touch the bottom border
+		if (figure[figureNumber].X[m] == HIHG - 2) //if one of the figure's parts touch the bottom border
 		{
-			//--------------------------------------------------------------
-			for (int n = 0; n < figure[figureNumber].X.size(); n++) 
+			if (m == figure[figureNumber].X.size() - 1)
 			{
-				figure[figureNumber].X[n]--; //all parts go one up
-				for (int r = 0; r < HIHG; r++)
-				{
-					if (figure[figureNumber].X[n] == r)
-					{
-						aMap.row[r].numberOfElements++;
-					}
-				}
+				RowElementsIncrease();
 			}
-			//---------------------------------------------------------------
 			dropFigure = true;
 			position = 0;
 		}
@@ -61,6 +66,7 @@ void Figure::FigureTouchOtherFigure()
 						dropFigure = true;
 						position = 0; // set start position for the new figure
 						speedUp = false;
+						RowElementsIncrease();
 					}
 					else
 					{
@@ -87,17 +93,13 @@ void Figure::GameOver()
 	}
 }
 
-void Figure::MoveFiguresDown(int figureNumber)
+void Figure::MoveFiguresDown(int currentFigure, int row)
 {
-	for (int n = 0; n < figure[figureNumber].X.size(); n++)
+	for (int n = 0; n < figure[currentFigure].X.size(); n++)
 	{
-		figure[figureNumber].X[n]++;
-		for (int r = 0; r < HIHG; r++)
+		if (figure[currentFigure].X[n] <= row)
 		{
-			if (figure[figureNumber].X[n] == r)
-			{
-				aMap.row[r].numberOfElements++;
-			}
+			figure[currentFigure].X[n]++;
 		}
 	}
 }
@@ -106,11 +108,11 @@ void Figure::DestroyFigures(int figureNumber, int row)
 {
 	for (int n = 0; n < figure[figureNumber].X.size(); n++)
 	{
-		if (figure[figureNumber].X[n] == row)//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1
+		if (figure[figureNumber].X[n] == row)//figure part is on the full row
 		{
 			figure[figureNumber].X.erase(figure[figureNumber].X.begin() + n);
 			figure[figureNumber].Y.erase(figure[figureNumber].Y.begin() + n);
-			n = -1;
+			n = -1; 
 		}
 	}
 }
@@ -119,17 +121,15 @@ void Figure::GetPoints()
 {
 	for (int r = 0; r < HIHG; r++)
 	{
-		if (aMap.row[r].numberOfElements == 8 /*WIDTH - 2*/)
+		if (aMap.row[r].numberOfElements >= WIDTH - 2)
 		{
 			score++;
 			aMap.row[r].numberOfElements = 0;
-			for (int k = 0; k < figureNumber; k++)
+			for (int k = 0; k <= figureNumber; k++)
 			{
-				DestroyFigures(k, aMap.row[r].numberOfElements);//!!!!!!!!!!!!!!!!!!!!
-				DestroyFigures(figureNumber, aMap.row[r].numberOfElements);//!!!!!!!!!!!!
-				MoveFiguresDown(k);
+				DestroyFigures(k, r);
+				MoveFiguresDown(k, r);
 			}
-			MoveFiguresDown(figureNumber);
 		}
 	}
 }
