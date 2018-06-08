@@ -69,13 +69,7 @@ void Map::DrawMap()
 		}
 		cout << endl;
 	}
-	cout << shape[figureNumber] << endl;
-	cout << position << endl;
 	cout << "Score = " << aFigure.score << endl;
-	for (int r = 0; r < HIHG; r++)
-	{
-		cout << "Row : " << r << "  " << row[r].numberOfElements << endl;
-	}
 }
 
 #endif // !BiuldingMap
