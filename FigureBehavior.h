@@ -121,7 +121,7 @@ void Figure::GetPoints()
 {
 	for (int r = 0; r < HIHG; r++)
 	{
-		if (aMap.row[r].numberOfElements >= WIDTH - 2)
+		if (aMap.row[r].numberOfElements >= WIDTH - 3)
 		{
 			score++;
 			aMap.row[r].numberOfElements = 0;
