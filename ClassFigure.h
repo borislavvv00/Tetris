@@ -11,8 +11,9 @@ private:
 	void UndoMove();
 	void GameOver();
 	void GetPoints();
-	void MoveFiguresDown(int);
+	void MoveFiguresDown(int, int);
 	void DestroyFigures(int, int);
+	void RowElementsIncrease();
 	Direction figureDirection[NUMBER_OF_FIGURES];
 public:
 	int score;
